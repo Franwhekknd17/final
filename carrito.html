@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link href="styles/carrito.css" rel="stylesheet" type="text/css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 0;
+            background-image: url('fondo-mar.png');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #20c997;
+            padding: 20px 0;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid #17a2b8;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            border: 5px solid #fff;
+            border-radius: 10px;
+        }
+
+        nav {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .main-nav li {
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .main-nav li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 25px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        .main-nav li a:hover {
+            background-color: #17a2b8;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        /* Dropdown Styles */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #20c997;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+            border: 1px solid #17a2b8;
+        }
+
+        .dropdown-content li {
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .dropdown-content li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #17a2b8;
+        }
+
+        /* Show dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #20c997;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            border-top: 5px solid #17a2b8;
+            box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Cart Styles */
+        .cart {
+            padding: 2rem 0;
+        }
+
+        .cart h1 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: #343a40;
+        }
+
+        .cart-summary {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+
+        .cart-summary p {
+            margin: 0;
+            font-size: 1.25rem;
+        }
+
+        .cart-summary .btn {
+            width: 100%;
+        }
+
+        .table th, .table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .table th {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+
+        .table td {
+            background-color: #f8f9fa;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover, .btn-danger:hover {
+            opacity: 0.8;
+        }
+
+        .btn {
+            font-size: 0.875rem;
+            padding: 0.5rem 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <img src="mariscos-logo.jpg" alt="Mariscos Deliciosos" class="logo" />
+        <nav>
+            <ul class="main-nav">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="camarones.html">Camarones</a></li>
+                <li><a href="sopas.html">Sopas</a></li>
+                <li><a href="pescado.html">Pescado</a></li>
+                <li><a href="carrito.html">Carrito de Compras</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Más</a>
+                    <ul class="dropdown-content">
+                        <li><a href="ayuda.html">Ayuda</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart">
+            <div class="container">
+                <h1>Carrito de Compras</h1>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Total</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartTableBody">
+                        <!-- Rows will be dynamically added here -->
+                    </tbody>
+                </table>
+                <div class="cart-summary">
+                    <p><strong>Total:</strong> <span id="lblTotal">$0.00</span></p>
+                    <button id="btnCheckout" class="btn btn-primary">Proceder al Pago</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Mariscos Deliciosos. Todos los derechos reservados.</p>
+    </footer>
+
+   
+</body>
+
+</html>

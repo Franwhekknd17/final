@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Mariscos Deliciosos</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 0;
+            background-image: url('fondo-mar.png'); /* Fondo estilo mar */
+            background-size: cover;
+            background-attachment: fixed; /* Fondo fijo para un efecto elegante */
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #20c997; /* Color verde mar */
+            padding: 20px 0;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid #17a2b8; /* Color azul marino */
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            border: 5px solid #fff; /* Borde blanco para el logo */
+            border-radius: 10px;
+        }
+
+        nav {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .main-nav li {
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .main-nav li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 25px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            font-family: 'Verdana', sans-serif; /* Tipografía moderna */
+        }
+
+        .main-nav li a:hover {
+            background-color: #17a2b8; /* Color azul marino */
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        /* Dropdown Styles */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #20c997; /* Color verde mar */
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+            border: 1px solid #17a2b8; /* Borde azul marino */
+        }
+
+        .dropdown-content li {
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .dropdown-content li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #17a2b8; /* Color azul marino */
+        }
+
+        /* Show dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #20c997; /* Color verde mar */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            border-top: 5px solid #17a2b8; /* Color azul marino */
+            box-shadow: 0px -4px 8px rgba(0,0,0,0.2);
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #20c997; /* Color verde mar */
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+            margin-top: 20px;
+            background-image: url('pescado-hero.jpg'); /* Fondo atractivo */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 {
+            color: #20c997; /* Color verde mar */
+            font-size: 2.5em;
+            margin: 0;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        .hero p {
+            color: #333;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 5px solid #20c997; /* Borde verde mar */
+        }
+
+        /* Additional Styles */
+        .section {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #fff;
+            border: 1px solid #20c997; /* Color verde mar */
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .section h2 {
+            color: #20c997; /* Color verde mar */
+            font-size: 2em;
+            border-bottom: 2px solid #17a2b8; /* Color azul marino */
+            padding-bottom: 10px;
+        }
+
+        .section p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="mariscos-logo.jpg" alt="Mariscos Deliciosos" class="logo" />
+        <nav>
+            <ul class="main-nav">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="camarones.html">Camarones</a></li>
+                <li><a href="sopas.html">Sopas</a></li>
+                <li><a href="pescado.html">Pescado</a></li>
+                <li><a href="carrito.html">Carrito de Compras</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Más</a>
+                    <ul class="dropdown-content">
+                        <li><a href="ayuda.html">Ayuda</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="welcome-message">
+            <!-- Welcome message can be added here -->
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>Bienvenidos a Mariscos Deliciosos</h1>
+        <p>Disfruta de la mejor selección de mariscos frescos.</p>
+        <img src="hero-image.jpg" alt="Mariscos Deliciosos">
+    </div>
+
+    <div class="section">
+        <h2>Nuestros Productos</h2>
+        <p>Explora nuestra variedad de mariscos, camarones, sopas, y más.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Mariscos Deliciosos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

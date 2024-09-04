@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camarones</title>
+    <link href="styles/camarones.css" rel="stylesheet" type="text/css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 0;
+            background-image: url('fondo-mar.png');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #20c997;
+            padding: 20px 0;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid #17a2b8;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            border: 5px solid #fff;
+            border-radius: 10px;
+        }
+
+        nav {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .main-nav li {
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .main-nav li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 25px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        .main-nav li a:hover {
+            background-color: #17a2b8;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        /* Dropdown Styles */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #20c997;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+            border: 1px solid #17a2b8;
+        }
+
+        .dropdown-content li {
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .dropdown-content li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #17a2b8;
+        }
+
+        /* Show dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #20c997;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            border-top: 5px solid #17a2b8;
+            box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('camarones-banner.jpg') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+            position: relative;
+            min-height: 200px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin: 20px 0;
+            padding: 0;
+        }
+
+        .product-menu .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .product-card {
+            flex: 1 1 calc(33.333% - 1rem);
+            box-sizing: border-box;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            transform: rotate(2deg) scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            opacity: 0.9;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .product-card h2,
+        .product-card p {
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="mariscos-logo.jpg" alt="Mariscos Deliciosos" class="logo" />
+        <nav>
+            <ul class="main-nav">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="camarones.html">Camarones</a></li>
+                <li><a href="sopas.html">Sopas</a></li>
+                <li><a href="pescado.html">Pescado</a></li>
+                <li><a href="carrito.html">Carrito de Compras</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Más</a>
+                    <ul class="dropdown-content">
+                        <li><a href="ayuda.html">Ayuda</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Nuestros Camarones</h1>
+            <p>Descubre nuestra variedad de camarones, ideales para cualquier ocasión.</p>
+        </section>
+
+        <section class="product-menu">
+            <div class="container">
+                <!-- Producto 1 -->
+                <div class="product-card">
+                    <img src="camarones con yuca.jpg" alt="Camarones con Yuca" class="product-img" />
+                    <h2>Camarones con Yuca</h2>
+                    <p><strong>Precio:</strong> 12,00 €</p>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="product-card">
+                    <img src="camarones con tostones y ensalada.jpg" alt="Camarones con Tostones y Ensalada" class="product-img" />
+                    <h2>Camarones con Tostones y Ensalada</h2>
+                    <p><strong>Precio:</strong> 11,00 €</p>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="product-card">
+                    <img src="camarones empanizados.jpg" alt="Camarones Empanizados" class="product-img" />
+                    <h2>Camarones Empanizados</h2>
+                    <p><strong>Precio:</strong> 10,00 €</p>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="product-card">
+                    <img src="hamburguesa con camarones.jpg" alt="Hamburguesa con Camarones" class="product-img" />
+                    <h2>Hamburguesa con Camarones</h2>
+                    <p><strong>Precio:</strong> 13,00 €</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mariscos Deliciosos. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

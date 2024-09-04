@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda - Restaurante Delicias</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 0;
+            background-image: url('fondo-mar.png'); /* Fondo estilo mar */
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #20c997; /* Color verde mar */
+            padding: 20px 0;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid #17a2b8; /* Color azul marino */
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            border: 5px solid #fff; /* Borde blanco para el logo */
+            border-radius: 10px;
+        }
+
+        nav {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .main-nav li {
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .main-nav li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 25px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        .main-nav li a:hover {
+            background-color: #17a2b8; /* Color azul marino */
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #20c997; /* Color verde mar */
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+            border: 1px solid #17a2b8; /* Borde azul marino */
+        }
+
+        .dropdown-content li {
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .dropdown-content li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #17a2b8; /* Color azul marino */
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Main Content */
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .ayuda {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #20c997; /* Color verde mar */
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+            margin-top: 20px;
+            background-image: url('pescado-hero.jpg'); /* Fondo atractivo */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ayuda h1 {
+            color: #20c997; /* Color verde mar */
+            font-size: 2.5em;
+            margin: 0;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        .ayuda p {
+            color: #333;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .manuales {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1em;
+        }
+
+        .manual-link {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5em;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .manual-link:hover {
+            background-color: #f1f1f1;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .manual-img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 1em;
+        }
+
+        .manual-link h2 {
+            margin: 0;
+            font-size: 1.3em;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #20c997; /* Color verde mar */
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            border-top: 5px solid #17a2b8; /* Color azul marino */
+            box-shadow: 0px -4px 8px rgba(0,0,0,0.2);
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="mariscos-logo.jpg" alt="Mariscos Deliciosos" class="logo" />
+        <nav>
+            <ul class="main-nav">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="camarones.html">Camarones</a></li>
+                <li><a href="sopas.html">Sopas</a></li>
+                <li><a href="pescado.html">Pescado</a></li>
+                <li><a href="carrito.html">Carrito de Compras</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Más</a>
+                    <ul class="dropdown-content">
+                        <li><a href="ayuda.html">Ayuda</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="ayuda">
+            <h1>Ayuda y Manuales</h1>
+            <p>Encuentra aquí información útil sobre cómo usar nuestro sistema y accede a manuales descargables:</p>
+            <div class="manuales">
+                <a href="4-Manuales de operaciones y procedimientos.pdf" class="manual-link" download>
+                    <img src="usuario.png" alt="Manual de Usuario" class="manual-img">
+                    <h2>Manual de Usuario</h2>
+                </a>
+                <a href="manualtecnico.pdf" class="manual-link" download>
+                    <img src="tecnico.png" alt="Manual Técnico" class="manual-img">
+                    <h2>Manual Técnico</h2>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Restaurante Delicias. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
